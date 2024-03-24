@@ -1,0 +1,743 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Beauty Hurts / Virtual Exhibit - Massively by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/slick.css" />
+		<link rel="stylesheet" href="assets/css/slick-theme.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Beauty Hurts</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Home</a></li>
+							<li class="active"><a href="exhibit.html">Virtual Exhibit</a></li>
+							<li><a href="narrative.html">Narrative</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Post -->
+							<section class="post">
+								<header class="major">
+									<p>Click on a section of the exhibit below to explore it!</p>
+									<p>Sydney Salinda</p>
+								</header>
+								<style>
+									body {
+										position: relative;
+									}
+
+									.ui-widget-overlay {
+										left: 0;
+										right: 0;
+										top: 0;
+										bottom: 0;
+										position: absolute;
+										z-index: 1;
+										opacity: 0.5;
+										background: grey;
+									}
+									.exhibit {
+										width: 100%;
+										box-sizing: border-box;
+										position: relative;
+										padding-top: 70%;
+										background-color: #b995a1; /* Dusty Rose */
+										border-radius: 6px;
+  										border: 2px solid rgba(32, 33, 36, 0.25);
+									}
+
+									.unnecessary {
+										position: absolute;
+										top: 0;
+										left: 0;
+										display: none;
+									}
+
+									.display {
+										position: absolute;
+										background-color: #a36e80;
+										border: 1px solid rgba(32, 33, 36, 0.26);
+									}
+
+									.display span {
+										text-align: center;
+										width: 100%;
+										position: absolute;
+										top: 50%;
+										transform: translateY(-50%);
+									}
+
+									.display:hover {
+										background-color: #976777;
+										cursor: pointer;
+									}
+
+									#group1-wall {
+										top: 0;
+										left: 20%;
+										width: 60%;
+										height: 20%;
+									}
+									#group1-thrust {
+										left: 45%;
+										width: 20%;
+										top: 30%;
+										bottom: 30%;
+									}
+
+									#group2 {
+										top: 25%;
+										bottom: 50%;
+										width: 25%;
+										left: 0;
+									}
+
+									#group4 {
+										top: 55%;
+										bottom: 10%;
+										width: 20%;
+										left: 0;
+									}
+
+									#group3 {
+										top: 10%;
+										width: 10%;
+										bottom: 10%;
+										right: 0;
+									}
+
+									.ui-dialog {
+										z-index: 2;
+										background-color: white;
+										border-radius: 12px;
+										box-shadow: 0 6px 6px hsl(0deg 0% 0% / 0.3);
+										outline: none;
+									}
+
+									.ui-dialog-titlebar {
+										display: none;
+									}
+
+									.group-dialog {
+										padding: 10px 50px;
+										max-width: 60rem;
+									}
+
+									.group-dialog h2 {
+										text-align: center;
+										margin-bottom: 12px;
+									}
+
+									.group-dialog .slick-slider {
+										user-select: unset;
+									}
+
+									.group-dialog img {
+										border-radius: 12px;
+										margin-right: 12px;
+										width: auto;
+										height: auto;
+										display: block;
+										object-fit: cover;
+									}
+
+									.group-dialog .slick-next,
+									.group-dialog .slick-prev {
+										box-shadow: none;
+										padding: 0;
+										transform: none;
+										width: 40px;
+										height: 40px;
+									}
+
+									.group-dialog .slick-next {
+										right: -40px;
+									}
+
+									.group-dialog .slick-prev {
+										left: -40px;
+									}
+
+									.group-dialog .slick-next:hover::before,
+									.group-dialog .slick-prev:hover::before {
+										color: rgb(255, 0, 215) !important;
+									}
+
+									.group-dialog .slick-next::before,
+									.group-dialog .slick-prev::before {
+										color: rgb(33, 41, 49);
+										font-size: 40px;
+										transition: color 0.2s ease-in-out;
+									}
+
+									.slick-dots button {
+										box-shadow: none;
+									}
+
+									.item-content {
+										display: flex;
+										flex-direction: row;
+									}
+
+									.item {
+										padding: 12px;
+									}
+
+									.didactic h3 {
+										margin-bottom: 0;
+									}
+
+									.didactic p {
+										font-size: 18px;
+										line-height: 22px;
+									}
+
+									.close-button {
+										position: absolute;
+										top: 16px;
+										right: 16px;
+										padding: 0px 8px;
+										height: 40px;
+										line-height: 40px;
+										outline: none;
+									}
+
+									.dialogs {
+										display: none;
+									}
+								</style>
+								<div class="exhibit">
+									<span class="unnecessary">a</span>
+
+									<div id="group1-wall" class="display" data-group="1">
+										<span>Constrictive Clothing (cont.)</span>
+									</div>
+									<div id="group1-thrust" class="display" data-group="0">
+										<span>Constrictive Clothing</span>
+									</div>
+
+									<div id="group2" class="display" data-group="2">
+										<span>Fiery Fashion (cont.)</span>
+									</div>
+
+									<div id="group4" class="display" data-group="4">
+										<span>Fiery Fashion</span>
+									</div>
+
+									<div id="group3" class="display" data-group="3">
+										<span>Cosmetics</span>
+									</div>
+								</div>
+							</section>
+
+							<div class="dialogs">
+								<div id="group0-dialog" class="group-dialog">
+									<div class="dialog-content">
+										<h2>Constrictive Clothing</h2>
+										<button class="close-button">Close</button>
+										<div class="group-carousel">
+											<div> <!-- Item 3 slide -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item3.jpg">
+														<div class="didactic">
+															<h3 class="item-header">3. Corset with Laces</h3>
+															<p>
+																1910-1915 C.E. | New York City, NY, United States<br>
+																Ferris Bros, Co.<br>
+																Cotton, Bone<br>
+																<i>Gift of Carol L. Kregloh</i>
+															</p>
+																
+															<p>This Ferris Brothers' corset, like many from the early 20th century, achieved a slim waist with laces. However, tightlacing for an extreme hourglass figure could cause health problems like fainting and organ damage. While fashionable, these dangers challenged the idea that femininity equaled physical frailty.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 1 slide -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item1.jpg">
+														<div class="didactic">
+															<h3 class="item-header">1. Toddler's Corset</h3>
+															<p>1955 C.E. | United States<br>
+															Fabric (cotton, wool) and metal (overall material)<br>
+															<i>Gift of Joy Weeber, American Disability Activist</i></p>
+																
+															<p>Although this particular corset brace was used as a therapeutic device for Joy Weeber's polio, similarly styled corsets from the 19th century were used to shape the body of young girls for the sake of a womanly or more mature appearance. This practice, aimed at achieving an unrealistic beauty standard, could harm a child's developing body, potentially leading to lifelong health problems.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 2 slide -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item2.jpg">
+														<div class="didactic">
+															<h3 class="item-header">2. Corset Laces</h3>
+															<p>
+																19th Century C.E. | United States<br>
+																Cotton
+															</p>
+																
+															<p>Corsets shaped the 19th century silhouette, but tightlacing could be dangerous. Restricted breathing, digestive issues, and even rib cage deformation were possible. These laces were part of this process, which was often pursued for the sake of fashion.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- group0-dialog -->
+
+								<div id="group1-dialog" class="group-dialog">
+									<div class="dialog-content">
+										<h2>Constrictive Clothing</h2>
+										<button class="close-button">Close</button>
+										<div class="group-carousel">
+											<div> <!-- Item 4 slide -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item4.jpg">
+														<div class="didactic">
+															<h3 class="item-header">4. The Wedding Night</h3>
+															<p>
+																1850 C.E. | New York City, NY, United States<br>
+																J. Schultz, Currier & Ives<br>
+																Ink, Paper<br>
+																<i>Harry T. Peters "America on Stone" Lithography Collection</i>
+															</p>
+																
+															<p>"The Wedding Night" (1850) by J. Schultz is a sentimental genre print, a popular 19th century art form depicting idealized domestic scenes. This lithograph portrays a newlywed couple in a romantic setting, following the typical Victorian image of devoted spouses. While the man unties the woman's corset, a symbol of her "genteel" femininity, their expressions suggest lightheartedness rather than the passionate intimacy often implied. Despite the romanticized scene, such prints offered a limited view of marriage, often neglecting the power dynamics and potential submissiveness expected from women.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 6 slide -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item6.jpg">
+														<div class="didactic">
+															<h3 class="item-header">6. Woman Scolding Young Boy</h3>
+															<p>
+																February 28, 1927 C.E. | Massachusetts, United States<br>
+																William Sumner Appleton<br>
+																Stereograph, Paper<br>
+															</p>
+																
+															<p>This seemingly idyllic scene is not quite what it seems. The woman's beautiful red dress is contrasted by the uncomfortably tall, stiff white collar. These collars, while fashionable, were a health hazard. They restricted movement, pinching the neck and making breathing difficult. Dizziness, fainting, and even strokes could result from prolonged wear. Despite the discomfort, social pressure dictated this attire. Even in a casual moment, like leaning out a window, women were constrained by these restrictive collars.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 5 slide -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item5.jpg">
+														<div class="didactic">
+															<h3 class="item-header">5. The Lovers</h3>
+															<p>
+																1850 C.E. | New York City, New York, United States<br>
+																Napoleon Sarony of Sarony & Major<br>
+																Ink, Paper<br>
+																<i>Harry T. Peters "America on Stone" Lithography Collection</i>
+															</p>
+																
+															<p>Victorian sentimental prints depicted a romanticized view of family life, often featuring women in unrealistic clothing. These stiff collars, though fashionable, posed a health risk to women. The collars restricted blood flow and breathing, causing dizziness and fainting. In extreme cases, they could even lead to stroke or death. Despite the discomfort, these collars were a symbol of social status for women during the era. Strict social norms often outweighed health concerns. Thankfully, fashion trends changed in the late 19th century, and women were no longer constrained by these dangerous collars.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- group1-dialog -->
+
+								<div id="group2-dialog" class="group-dialog">
+									<div class="dialog-content">
+										<h2>Fiery Fashion</h2>
+										<button class="close-button">Close</button>
+										<div class="group-carousel">
+											<div> <!-- Item 9 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item9.jpg">
+														<div class="didactic">
+															<h3 class="item-header">9. Ostrich Feather Hat</h3>
+															<p>
+																1910-1912 C.E. | United States<br>
+																Silk, Ostrict Feathers<br>
+																<i>Gift of Mrs. Alice Matthew Terry Love</i>
+															</p>
+																
+															<p>This elegant hat embodies a hidden danger of past fashion trends: flammable feathers. While ostrich plumes added a touch of luxury, they were highly susceptible to catching fire. A stray spark from a gaslight or cigarette could ignite the feathery embellishment, causing serious burns to the wearer or nearby individuals. The popularity of feathers from the late 19th century to the early 20th century in millinery fueled the rise of ostrich farms, but these plumes often came at a cost.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 11 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item11.jpg">
+														<div class="didactic">
+															<h3 class="item-header">11. Braided Cap</h3>
+															<p>
+																1850s C.E. | United States<br>
+																Muslin, Cotton
+															</p>
+																
+															<p>In the mid-19th century, braided and embroidered caps made from muslin and cotton were fashionable accessories for women. Despite their delicate appearance, these caps concealed inherent dangers that threatened the well-being of women. Crafted from highly flammable materials, they posed a significant risk of catching fire in the presence of open flames, such as those found in oil lamps commonly used for lighting. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 12 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item12.jpg">
+														<div class="didactic">
+															<h3 class="item-header">12. Heeled Shoes</h3>
+															<p>
+																18th Century C.E. | United States<br>
+																Gold Silk Damask, Wood (heel)<br>
+																<i>Gift of Mrs. Douglas Hathaway</i>
+															</p>
+																
+															<p>Heeled shoes from the 18th century, particularly in the United States, were symbols of elegance and status, often crafted from luxurious materials, as seen in the heels on display. However, beneath their ornate appearance lay inherent dangers for women. The elevated heels, though fashionable, destabilized posture, leading to an increased risk of falls and injuries, particularly on uneven surfaces or slippery floors. Other issues that women ran into was how the narrow, pointed toe boxes forced the foot into unnatural positions, contributing to bunions, corns, and other foot deformities. The lack of arch support and cushioning also caused chronic foot pain and discomfort that was exacerbated with prolonged wear. Heeled shoes of the 18th century posed significant risks to women's physical health and mobility, but heeled shoes of today still feature similar issues. </p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 7 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item7.jpg">
+														<div class="didactic">
+															<h3 class="item-header">7. Crinoline Petticoat</h3>
+															<p>
+																1955 C.E. | United States<br>
+																<i>Gift of Jeanne S. Eddy</i>
+															</p>
+																
+															<p>Though 1955 crinoline petticoats created a stunning silhouette under full skirts, they had their own set of dangers. Made of layers of stiff netting, these petticoats could easily catch fire from open flames or cigarettes. A spark could engulf the voluminous fabric in seconds, causing serious burns. Considering the wide circumferences with this style, fire accidents happened that led to thousands of deaths in the United States. Getting caught in machinery, car doors, or even narrow doorways could cause trips and falls, or worse, become entangled and lead to serious injury. While crinoline petticoats were a popular fashion statement, their wearers had to be constantly vigilant of these hazards.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 13 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item13.jpg">
+														<div class="didactic">
+															<h3 class="item-header">13. Hair Curling Iron Set</h3>
+															<p>
+																1980-1920 C.E. | United States<br>
+																Iron, Rubber, Wood (box)<br>
+																<i>Gift of Estate of Cassie Mason Myers Julian-James</i>
+															</p>
+																
+															<p>Hair curling iron sets from the late 19th to early 20th centuries in the United States, before electricity was popularized in households outside of the upper class, were indispensable tools for achieving fashionable hairstyles of the time. However, despite their utility, these sets harbored significant dangers for women. Unlike modern curling irons with barrels, these sets consisted of tongs, which required heating over gas burners or open flames. The metal components of the curling irons could become excessively hot, leading to hair damage, breakage, and even accidental scalp burns. Even if households owned electric versions, the risk of electrical fires was high due to the lack of safety standards and proper insulation in such sets.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- group2-dialog -->
+
+								<div id="group4-dialog" class="group-dialog">
+									<div class="dialog-content">
+										<h2>Fiery Fashion</h2>
+										<button class="close-button">Close</button>
+										<div class="group-carousel">
+											<div> <!-- Item 8 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item8.jpg">
+														<div class="didactic">
+															<h3 class="item-header">8. Crinoline Difficulties</h3>
+															<p>
+																19th-20th Century C.E. | Worcester, Massachusetts<br>
+																N. A. Plimpton & Co.<br>
+																Stereograph, Paper
+															</p>
+																
+															<p>This stereograph, titled "Crinoline Difficulties," humorously depicts a danger of the popular 1955 fashion trend: crinoline petticoats. The wide hoops, while creating a fashionable silhouette, could cause wearers to lose balance and tumble. Especially when rushing or navigating uneven surfaces, the crinoline's rigid frame could snag on furniture or the wearer's own feet. These falls could result in scrapes, bruises, or even more serious injuries. As the scene depicts, helping a fallen crinoline wearer required assistance, often revealing layers of petticoats in an embarrassing situation. Despite the fashionable volume, crinoline petticoats demanded caution and a graceful gait to avoid ungainly tumbles.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 10 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item10.jpg">
+														<div class="didactic">
+															<h3 class="item-header">10. Feathered Hats Postcard</h3>
+															<p>
+																1907+ C.E. | Atlantic City, New Jersey<br>
+																Photograph, Paper
+															</p>
+																
+															<p>In the early 20th century, the fashion for hats adorned with feathers posed significant dangers to women. While these accessories were symbols of elegance and sophistication, they concealed a darker truth. The feathers often came from exotic birds hunted to near extinction. Illustrating this peril is a postcard from Atlantic City, New Jersey, where women proudly showcased their feathered hats. However, beneath the surface of glamor lies a hazardous reality: the hats posed health risks due to the unsanitary conditions in which feathers were processed and the potential transmission of diseases. Feather adornments were not only flammable but also had the potential to carry diseases, posing additional threats to women's well-being. This postcard serves as a stark reminder of the risks women faced in pursuit of fashion, where personal safety was rarely considered.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- group4-dialog -->
+
+								<div id="group3-dialog" class="group-dialog">
+									<div class="dialog-content">
+										<h2>Cosmetics</h2>
+										<button class="close-button">Close</button>
+										<div class="group-carousel">
+											<div> <!-- Item 18 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item18.jpg">
+														<div class="didactic">
+															<h3 class="item-header">18. Ox Marrow Pomade</h3>
+															<p>
+																1840s - early 20th century | United States<br>
+																Glass bottle, cork stopper, paper label, ox marrow, oil
+															</p>
+																
+															<p>During the 19th and early 20th centuries, the allure of ox marrow pomade and similarly derived animal-based products was widespread, particularly among women seeking hair care remedies. Marketing tactics in the 20th century targeted Black Americans, promising not only hair treatment but a solution to societal beauty ideals. However, these assurances obscured the dangers posed by unregulated ingredients and production methods—at home or manufactured, leaving consumers susceptible to health hazards. The high fat content of ox marrow could attract vermin and lead to poor hygiene, posing a risk in homes where the product was used.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 20 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item20.jpg">
+														<div class="didactic">
+															<h3 class="item-header">20. Paris Green Dye</h3>
+															<p>
+																1881 C.E. | United States<br>
+																W. H. Schieffelin & Company<br>
+																Glass bottle, glass topper, paper labels, copper(II) acetate, arsenic trioxide<br>
+																<i>Gift of William H. Schieffelin & Company</i>
+															</p>
+																
+															<p>Paris Green dye, once a staple of women's beauty arsenals, embodied the perilous nature of historical beauty products. Promoted for its vibrant hue and versatility in cosmetics and fashion, however, it was made with arsenic. This toxic substance, when absorbed through the skin or inhaled, could lead to severe health complications such as organ damage and even death. Despite its dangers, Paris Green dye remained popular in the 19th and early 20th centuries, with women risking their well-being in pursuit of fashionable appearances.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 17 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item17.jpg">
+														<div class="didactic">
+															<h3 class="item-header">17. Dubarry's Face Powder</h3>
+															<p>
+																Late 19th Century C.E. | New York City, New York<br>
+																Richard Hudnut<br>
+																Cardboard container, lead carbonate, zinc oxide, chalk
+															</p>
+																
+															<p>This face powder, while promising complexion enhancement, contained harmful ingredients. Women who used Dubarry's Face Powder unknowingly subjected themselves to serious health risks, including lead poisoning and skin irritation. The lead carbonate in the powder could cause severe neurological damage, particularly harmful to women's health and prolonged use of zinc oxide and chalk could lead to skin irritation and allergies. To this day, lead in lipsticks and other cosmetics is still being investigated.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 19 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item19.jpg">
+														<div class="didactic">
+															<h3 class="item-header">19. Mercury Protiodide</h3>
+															<p>
+																19th Century C.E. | Indianapolis, Indiana<br>
+																Eli Lilly and Company<br>
+																Glass bottle, cork stopper, paper label, mercury protiodide
+															</p>
+																
+															<p>Mercury protiodide, a cosmetic once used to lighten blemishes, concealed a serious danger: mercury toxicity. Exposure to mercury can lead to severe health problems including neurological and kidney damage. Despite its popularity in the past, users were unaware of the risks they faced. Prolonged use could result in mercury poisoning, with symptoms often appearing gradually over time.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 21 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item21.jpg">
+														<div class="didactic">
+															<h3 class="item-header">21. Sozodont Tooth Paste</h3>
+															<p>
+																19th Century C.E. | New York City, New York<br>
+																Hall & Ruckel<br>
+																Oil, orris root, carbonate of calcium, magnesia<br>
+																<i>Part of G.E. Damon Collection</i>
+															</p>
+																
+															<p>Sozodont toothpaste, marketed as a dental breakthrough in the late 19th century, claimed to offer superior cleaning and whitening properties with alkaline features to combat oral acidity. However, its alkaline composition proved damaging to teeth, causing irreversible harm over time. Women, targeted by beauty standards promoting a radiant smile as feminine and attractive, fell victim to this deceptive advertising. Many experienced weakened enamel, heightened tooth sensitivity, and gum tissue erosion due to Sozodont's abrasive nature.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 15 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item15.jpg">
+														<div class="didactic">
+															<h3 class="item-header">15. Safe Arsenic Complexion Wafers</h3>
+															<p>
+																1916-1928 C.E. | New York City, New York<br>
+																James P. Campbell<br>
+																Printed Paper (packaging), Arsenic<br>
+																<i>Gift of Richard Holstein</i>
+															</p>
+																
+															<p>This product, advertised as a remedy for various skin conditions and general health issues, was marketed with the assurance of being "absolutely safe and harmless to anybody." Packaged in a blue and white paper-wrapped box with Dr. Campbell's signature as a trademark, it contained 120 tablets priced at one dollar. Despite the guarantee of safety, the product's claims to address freckles, pimples, and other facial disfigurements led to harmful outcomes for women and others who used it.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 16 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item16.jpg">
+														<div class="didactic">
+															<h3 class="item-header">16. Fluid Extract of Belladonna</h3>
+															<p>
+																1926 C.E. | Detroit, Michigan<br>
+																Parke, Davis & Company<br>
+																Glass bottle, paper label, cork lid, plastic seal, belladonna leaves (active ingredient)<br>
+																<i>Gift of Parke, Davis & Company</i>
+															</p>
+																
+															<p>Belladonna leaves, known for their medicinal properties, were also utilized in women's beauty practices, particularly through the use of liquid extract to dilate pupils. This practice aimed to achieve a doe-eyed appearance, perceived as enhancing women's beauty. However, the cosmetic use of belladonna extract posed significant risks to women's health. The dilation of pupils caused by belladonna extract could lead to blurred vision, light sensitivity, and temporary blindness, while excessive use could result in severe poisoning symptoms such as hallucinations and cardiac complications.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div> <!-- Item 14 slide (unused, for now.) -->
+												<div class="item">
+													<div class="item-content">
+														<img src="images/item14.jpg">
+														<div class="didactic">
+															<h3 class="item-header">14. Black and White Bleaching Cream</h3>
+															<p>
+																1940s C.E. | New York & Memphis, Tennessee<br>
+																Black and White Company, Plough, Inc.<br>
+																Glass container, product ingredients: ammoniated mercury, 1¼ %, bismuth subnitrate, zinc oxide<br>
+																<i>Gift of The Fournet Drugstore Collection</i>
+															</p>
+																
+															<p>In the 1940s, a product marketed for exfoliation caused lasting harm to women's skin, perpetuating harmful beauty standards and racial biases. Designed to lighten skin tone and erase freckles, it reinforced Eurocentric ideals of beauty and marginalized women of color. Despite historical scrutiny, similar products persist today, perpetuating systemic inequalities and stereotypes.</p>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- group3-dialog -->
+							</div><!-- dialogs -->
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section class="split contact">
+						<section class="alt">
+							<h3>Address</h3>
+							<p>1300 Constitution Ave. NW<br />
+							Washington, DC 20560</p>
+						</section>
+						<section class="alt">
+							<h3>Hours</h3>
+							<p>10:00AM to 5:30PM daily</p>
+						</section>
+					</section>
+					<section class="split contact">
+						<section>
+							<h3>Email</h3>
+							<p><a href="#">sydney.salinda@sjsu.edu</a></p>
+						</section>
+					</section>
+				</footer>
+
+				<!-- Copyright -->
+				<div id="copyright">
+					<ul><li>Site template: <a href="https://html5up.net">HTML5 UP</a></li></ul>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+			<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+			<script>
+				// For each group, give them a modal.
+				$('.exhibit .display').click(function () {
+					const n = $(this).data('group');
+					const dialogSelector = `#group${n}-dialog`;
+					console.log("Huh...", this);
+					$(dialogSelector).dialog({ 
+						modal: true,
+						resizable: true,
+						beforeClose: function(event, ui) {
+							$("body").css({ overflow: 'inherit' });
+						},
+						width: 'fit-content',
+					});
+
+					$("body").css({ overflow: 'hidden' });
+					$('.ui-widget-overlay').click(() => {
+						$(dialogSelector).dialog('close');
+					});
+
+					$(dialogSelector + " .group-carousel").slick({
+						dots: true,
+						infinite: true,
+						draggable: false,
+						speed: 200,
+						fade: true,
+						cssEase: 'linear',
+					});
+					
+					// Ensure that top-offset = document.height() - dialog.height + ~40
+					$('.ui-dialog').css('top', -($(document).height() - $('.ui-dialog').height()) + $(document).scrollTop() + 45);
+				});
+
+				// Any close button closes all of them
+				$('.close-button').click(() => {
+					$('.group-dialog').each(function () {
+						$(this).dialog('instance') && $(this).dialog('close');
+					});
+				})
+			</script>
+
+	</body>
+</html>
